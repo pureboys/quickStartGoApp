@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f0f0f0;
+}
+
+nav{
+    border: 1px solid #aaaaaa;
+    padding: 0.5em;
+    background: #ffffff;
+    text-align: right;
+}
+
+main > .update {
+    padding: 0.5em;
+    background: #ffffff;
+    border: 1px solid #aaaaaa;
+    margin-bottom: 1em;
+}
+
+main{
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#update-form {
+    text-align: right;
+}
+
+#update-form textarea{
+    width: 100%;
+    margin-bottom: .5em;
+    resize: vertical;
+}
+
+#update-form button {
+    margin-bottom: 1.5em;
+}

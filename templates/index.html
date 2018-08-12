@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+<nav>
+    <a href="/logout">logout</a>
+</nav>
+
+<main>
+    <h1>{{ .Title }}</h1>
+
+{{ if .DisplayForm }}
+    <div id="update-form">
+        <form method="post" action="/">
+            <textarea name="update" id="" cols="30" rows="10"></textarea>
+            <div>
+                <button type="submit">Post Update</button>
+            </div>
+        </form>
+    </div>
+{{ end }}
+
+{{ range .Updates }}
+    <div class="update">
+        <div>
+            <strong>
+                <a href="/{{ .GetUser.GetUsername }}">
+                {{ .GetUser.GetUsername }}
+                </a> wrote:
+            </strong>
+        </div>
+        <div>{{ .GetBody }}</div>
+    </div>
+{{ end }}
+
+</main>
+
+</body>
+</html>
